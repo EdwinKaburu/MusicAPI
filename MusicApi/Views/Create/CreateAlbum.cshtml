@@ -1,0 +1,55 @@
+﻿@model CreateAlbumModel
+
+<div class="createForm">
+    @await Html.PartialAsync("_CreatePartial")
+    <div>
+        <h4>Create Album</h4>
+    </div>
+    <form asp-action="CreateAlbum" method="post" enctype="multipart/form-data">
+        <div>
+            <label class="createLabel" asp-for="AlbumName"></label>
+            <div><span asp-validation-for="AlbumName" class="text-danger"></span></div>
+            <input class="createText" size="1" asp-for="AlbumName" />
+        </div>
+        <div>
+            <label class="createLabel" asp-for="ArtistId"></label>
+            <div><span asp-validation-for="ArtistId" class="text-danger"></span></div>
+            <select class="createText" id="artist" asp-for="ArtistId">
+                @{
+                    foreach (var item in ViewBag.Artists)
+                    {
+                        <option value="@item.ArtistId">@item.ArtistName</option>
+                    }
+                }
+            </select>
+        </div>
+        <div>
+            <label class="createLabel" asp-for="GenreId"></label>
+            <div><span asp-validation-for="GenreId" class="text-danger"></span></div>
+            <select class="createText" id="genres" asp-for="GenreId">
+                @{
+                    foreach (var item in ViewBag.Genres)
+                    {
+                        <option value="@item.GenreId">@item.GenreName</option>
+                    }
+                }
+            </select>
+        </div>
+        <div>
+            <label class="createLabel" asp-for="ReleaseYear"></label>
+            <div><span asp-validation-for="ReleaseYear" class="text-danger"></span></div>
+            <input type="number" class="createText" value="@DateTime.Now.Year" asp-for="ReleaseYear" />
+        </div>
+        <div>
+            <label class="createLabel" asp-for="PictureOne"></label>
+            <div><span asp-validation-for="PictureOne" class="text-danger"></span></div>
+            <input type="file" accept="image/*" asp-for="PictureOne" />
+        </div>
+        <div>
+            <label class="createLabel" asp-for="PictureTwo"></label>
+            <input type="file"  accept="image/*" asp-for="PictureTwo" />
+        </div>
+        <button type="submit" class="button">Create New Album</button>
+        <a asp-action="Index">Cancel</a>
+    </form>
+</div>

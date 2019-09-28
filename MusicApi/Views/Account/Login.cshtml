@@ -1,0 +1,41 @@
+﻿@*@model RegisterModel
+
+    <div>
+        <h4>Login</h4>
+    </div>
+    <div asp-validation-summary="All"></div>
+    <form asp-action="Register" method="post">
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+        </div>
+        <button type="submit" class="button">Submit Login</button>
+        <a asp-action="Register">Register New Account</a>
+        <a asp-action="Index">Cancel</a>
+    </form>*@
+
+@model LoginModel
+<div class="createForm">
+    <div>
+    <h4>Login</h4>
+</div>
+<form asp-action="Login" method="post">
+    <div>
+        <label class="createLabel" asp-for="Name"></label>
+        <div><span asp-validation-for="Name" class="text-danger"></span></div>
+        <input class="createText" asp-for="Name" />
+    </div>
+    <div>
+        <label class="createLabel" asp-for="Password"></label>
+        <div><span asp-validation-for="Password" class="text-danger"></span></div>
+        <input type="password" class="createText" asp-for="Password" />
+    </div>
+    <button type="submit" class="button">Submit Login</button>
+    <a asp-action="Register">Register</a>
+    <a asp-action="Index">Cancel</a>
+</form>
+</div><br />

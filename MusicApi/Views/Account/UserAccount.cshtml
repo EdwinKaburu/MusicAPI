@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Album>
+@{
+    ViewData["Title"] = "UserAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Welcome!!!</h1>
+<style>
+    .card {
+        background: #353535 !important;
+        border: 1px solid #f2f2f2;
+        color: #ffffff;
+    }
+
+    #playIcon:hover {
+        color: #1db954;
+    }
+</style>
+<script>
+    function returnValue()
+
+
+</script>
+
+<div class="grid-container">
+    <div class="grid-x grid-padding-x small-up-2 medium-up-3">
+        @foreach (var item in Model)
+        {
+
+            //Byte data for both music and photos
+            string imgMusic = string.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.AlbumPicture.PictureOne));
+
+            <div class="cell">
+                <div class="card">
+                    <img src="@imgMusic" style="width:370px !important; height:300px !important;">
+                    <div class="card-section">
+                        <div style="float:left">
+                            <h5>@item.AlbumName</h5>
+                            <p>By @item.Artist.ArtistName </p>
+                        </div>
+                        <div style="float:right">
+                            <i id="playIcon" class="step fi-play size-72" style="font-size:2.5em;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
+    <hr />
+
+</div>
+
+

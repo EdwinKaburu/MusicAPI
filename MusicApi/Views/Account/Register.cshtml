@@ -1,0 +1,25 @@
+﻿@model RegisterModel
+<div class="createForm">
+    <div>
+        <h4>Register</h4>
+    </div>
+    <form asp-action="Register" method="post">
+        <div>
+            <label class="createLabel" asp-for="Name"></label>
+            <div><span asp-validation-for="Name" class="text-danger"></span></div>
+            <input class="createText" asp-for="Name" />
+        </div>
+        <div>
+            <label class="createLabel" asp-for="Email"></label>
+            <div><span asp-validation-for="Email" class="text-danger"></span></div>
+            <input class="createText" asp-for="Email" />
+        </div>
+        <div>
+            <label class="createLabel" asp-for="Password"></label>
+            <div><span asp-validation-for="Password" class="text-danger"></span></div>
+            <input type="password" class="createText" asp-for="Password" />
+        </div>
+        <button type="submit" class="button">Register New User</button>
+        <a asp-action="Index">Cancel</a>
+    </form>
+</div>

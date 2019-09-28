@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <environment include="Development">
+        <link rel="stylesheet" asp-href-include="/lib/node_modules/foundation-sites/dist/**/*.min.css" asp-href-exclude="**/*-reboot*,**/*-grid*" />
+        <link rel="stylesheet" asp-href-include="/lib/node_modules/foundation-icons/**/*.css" />
+        <link rel="stylesheet" href="~/css/site.css?v=3" />
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.core.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.dropdown.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.dropdownMenu.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.keyboard.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.box.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/plugins/foundation.util.triggers.js" defer></script>
+        <script src="~/js/site.js?v=1" defer></script>
+    </environment>
+    <title>MusicApi</title>
+</head>
+<body>
+    <div class="title-bar">
+        <div class="title-bar-left">
+            <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+            <span class="title-bar-title">Music-Api</span>
+        </div>
+        <div class="title-bar-right">
+            <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
+        </div>
+    </div>
+
+    <div class="cell">
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+
+                <div aside class="left-off-canvas-menu">
+
+                    <div class="topnav" data-responsive-toggle="myTopnav" data-hide-for="medium">
+                        <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+                        <div class="title-bar-title">Menu</div>
+                    </div>
+
+                    <div class="topnav" id="myTopnav">
+
+                        <div class="top-bar-left">
+                            <a asp-controller="Home" asp-action="Index">Home</a> <br />
+                            <a asp-controller="Account" asp-action="Index">Log Out</a><br />
+                            <a asp-controller="Create" asp-action="CreateArtist">Create</a><br />
+                            <a asp-controller="Home" asp-action="UserPlaylistCreate">PortFolio</a><br />
+                            <a href="#about">About</a>
+                        </div>
+                        <hr />
+                        <div class="top-bar-right">
+                            <a>All Rights Reserved  Music API</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas>
+                <!-- Your menu or Off-canvas content goes here -->
+            </div>
+            <div class="off-canvas-content" data-off-canvas-content>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    @*<div class="row columns">
+            <div class="row columns">
+                <div class="topnav" data-responsive-toggle="myTopnav" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+                    <div class="title-bar-title">Menu</div>
+                </div>
+
+                <div class="topnav" id="myTopnav">
+
+                    <div class="top-bar-left">
+                        <a asp-controller="Home" asp-action="Index" class="active">Home</a>
+                        <a asp-controller="Account" asp-action="Login">Log In/Register</a>
+                        <a asp-controller="Create" asp-action="CreateArtist">Create</a>
+                        <a asp-controller="Home" asp-action="UserPlaylistCreate">PortFolio</a>
+                        <a href="#about">About</a>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="menu">
+                            <li><input type="search" placeholder="Search"></li>
+                            <li><button type="button" class="button">Search</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br /> <hr />
+            @RenderBody()
+
+            <hr />
+            <br /><br />
+
+            <footer style="background-color:#232323">
+                <p>Website developed by Edwin Kaburu, Patrick Mayer, and Kevin Stewart</p>
+                <p>Use of any 3rd party content on this site is for demonstration purposes only.</p>
+            </footer>
+
+        </div>*@
+
+</body>
+
+</html>

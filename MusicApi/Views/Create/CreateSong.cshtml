@@ -1,0 +1,44 @@
+﻿@model CreateSongModel
+
+<div class="createForm">
+    @await Html.PartialAsync("_CreatePartial")
+    <div>
+        <h4>Create Song</h4>
+    </div>
+    <form asp-action="CreateSong" method="post" enctype="multipart/form-data">
+        <div>
+            <label class="createLabel" asp-for="SongName"></label>
+            <div><span asp-validation-for="SongName" class="text-danger"></span></div>
+            <input class="createText" asp-for="SongName" />
+        </div>
+        <div>
+            <label class="createLabel" asp-for="AlbumId"></label>
+            <div><span asp-validation-for="AlbumId" class="text-danger"></span></div>
+            <select id="trackNum" asp-for="AlbumId">
+                @{
+                    foreach (var item in ViewBag.Albums)
+                    {
+                        <option value="@item.AlbumId">@item.AlbumName</option>
+                    }
+                }
+            </select>
+        </div>
+        <div>
+            <label class="createLabel" asp-for="TrackNum"></label>
+            <div><span asp-validation-for="TrackNum" class="text-danger"></span></div>
+            <input type="number" min="1" value="1" asp-for="TrackNum" />
+        </div>
+        <div>
+            <label class="createLabel" asp-for="SongData"></label>
+            <div><span asp-validation-for="SongData" class="text-danger"></span></div>
+            <input type="file" accept="audio/*" asp-for="SongData" />
+        </div>
+        <div>
+            <label class="createLabel" asp-for="VideoLink"></label>
+            <div><span asp-validation-for="VideoLink" class="text-danger"></span></div>
+            <input asp-for="VideoLink" />
+        </div>
+        <button type="submit" class="button">Create New Song</button>
+        <a asp-action="Index">Cancel</a>
+    </form>
+</div>

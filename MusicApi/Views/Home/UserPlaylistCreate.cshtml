@@ -1,0 +1,37 @@
+﻿@model ListView
+@{
+    ViewData["Title"] = "UserPlaylistCreate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //  int userIDs = int.Parse( ViewData["UserIDs"]);
+
+   // int userIDs = int.Parse(ViewBag.userIDs);
+}
+<div class="row">
+    <div class="large-12">
+        <div asp-validation-summary="All"></div>
+        <form asp-controller="Home" asp-action="UserPlaylistCreate" method="post">
+            <div>
+                <label asp-for="@Model.GetPlaylist.PlaylistName" style="color:#ffffff"></label>
+                <input asp-for="@Model.GetPlaylist.PlaylistName" style="color:#000000" />
+            </div>
+            <div>
+                <label asp-for="@Model.GetPlaylist.PlaylistDesc" style="color:#ffffff"></label>
+                <input asp-for="@Model.GetPlaylist.PlaylistDesc" style="color:#000000" />
+            </div>
+            @*<div hidden>
+                <input asp-for="@Model.GetPlaylist.UserId" value="@userIDs" hidden />
+            </div>*@
+            <button type="submit" id="btn1" style="color:#ffffff">Submit</button>
+        </form>
+    </div>
+    <hr />
+    <div class="large-4">
+        <h4>UserPlaylists Created By User </h4>
+        
+        @foreach(var item in Model.UserPlaylists)
+        {
+            <P>@item.PlaylistName</P>
+        }
+    </div>
+</div>
+
