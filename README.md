@@ -1,5 +1,3 @@
-# MusicAPI
-
 # Music Api
 Music Api is a music streaming website in its infancy, with it subject to change in the time ahead. 
  - Music Api is built upong the Foundation responsive front-end framwork along with its icons the Foundation Icon Fonts 3.
