@@ -10,5 +10,7 @@ Music Api is a music streaming website in its infancy, with it subject to change
 
 Developers
 Edwin Kaburu - https://github.com/EdwinKaburu
+
 Patrick Mayer - https://github.com/PatrickMayer97
+
 Kevin Stewart - https://github.com/Riflly
