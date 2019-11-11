@@ -1,6 +1,6 @@
 # Music Api
-Music Api is a music streaming website in its infancy, with it subject to change in the time ahead. 
- - Music Api is built upong the Foundation responsive front-end framwork along with its icons the Foundation Icon Fonts 3.
+Music Api is an audio streaming web application sitein its infancy, w
+ - Music Api is built upon the Foundation responsive front-end framwork along with its icons the Foundation Icon Fonts 3.
  - The server-side web application framework used is Asp.Net-Core-Mvc
 # Features
 - Users are able to register/login and create and listen to custom playlist that contain music/songs.
