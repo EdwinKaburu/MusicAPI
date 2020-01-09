@@ -12537,11 +12537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EdwinPc\\Downloads\\API\\MusicAPI\\MusicApi\\MusicApi.csproj",
+      "projectUniqueName": "C:\\Users\\EdwinPc\\Downloads\\DataBase\\MusicAPI\\MusicApi\\MusicApi.csproj",
       "projectName": "MusicApi",
-      "projectPath": "C:\\Users\\EdwinPc\\Downloads\\API\\MusicAPI\\MusicApi\\MusicApi.csproj",
+      "projectPath": "C:\\Users\\EdwinPc\\Downloads\\DataBase\\MusicAPI\\MusicApi\\MusicApi.csproj",
       "packagesPath": "C:\\Users\\EdwinPc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EdwinPc\\Downloads\\API\\MusicAPI\\MusicApi\\obj\\",
+      "outputPath": "C:\\Users\\EdwinPc\\Downloads\\DataBase\\MusicAPI\\MusicApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12603,7 +12603,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
