@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "jquery": "3.4.0",
-    "jquery-validation": "1.17.0",
+    "jquery-validation": "1.19.3",
     "jquery-validation-unobtrusive": "3.2.9",
     "foundation-sites": "6.5.3",
     "foundation-icons": "1.0.1"
